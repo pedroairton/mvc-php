@@ -8,7 +8,6 @@ class Router{
     private $method= "home"; // default method
     private $param = [];
     public function __construct() {
-        echo '<pre>';
         $router = $this->url();
         if(file_exists(__DIR__ . '/../app/controllers/' . ucfirst($router[1]) . '.php')){
             $this->controller = ucfirst($router[1]);
