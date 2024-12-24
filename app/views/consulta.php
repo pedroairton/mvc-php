@@ -16,8 +16,8 @@
                             <td>Nome: <?= $reg['nome'] ?></td>
                             <td>Email: <?= $reg['email'] ?></td>
                             <td>
-                                <a href="?router=Site/editar/&id=<?=$reg['id']?>">Editar</a> |
-                                <a href="?router=Site/delete/&id=<?=$reg['id']?>">Deletar</a>
+                                <a href="?router=Site/editar/&id=<?=base64_encode($reg['id'])?>">Editar</a> |
+                                <a href="?router=Site/confirmDelete/&id=<?=base64_encode($reg['id'])?>">Deletar</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
